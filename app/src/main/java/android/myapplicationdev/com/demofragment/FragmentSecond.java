@@ -13,34 +13,34 @@ import android.widget.TextView;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentFirst extends Fragment {
+public class FragmentSecond extends Fragment {
 
     Button btnAddText;
-    TextView tvFrag1;
+    TextView tvFrag2;
 
-    public FragmentFirst() {
+
+    public FragmentSecond() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        View view =  inflater.inflate(R.layout.fragment_first, container, false);
-
-        tvFrag1 = (TextView)view.findViewById(R.id.tvFrag1);
-        btnAddText = (Button)view.findViewById(R.id.btnAddTextFrag1);
+        View view = inflater.inflate(R.layout.fragment_second, container,false);
+        tvFrag2 = (TextView) view.findViewById(R.id.tvFrag2);
+        btnAddText = (Button) view.findViewById(R.id.btnAddTextFrag2);
 
         btnAddText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String data = tvFrag1.getText().toString() + "\n" + "New Data";
-                tvFrag1.setText(data);
+                String data = tvFrag2.getText().toString() + "\n" + "New Data F2";
+                tvFrag2.setText(data);
             }
         });
 
         return view;
     }
+
 
 }
